@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerState
 {
-    protected Player player;
+    protected PlayerMoveController player;
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
 
@@ -14,7 +14,7 @@ public class PlayerState
 
     private string animBoolName;
 
-    public PlayerState(Player player,PlayerStateMachine playerStateMachine,PlayerData playerData,string animBoolName)
+    public PlayerState(PlayerMoveController player,PlayerStateMachine playerStateMachine,PlayerData playerData,string animBoolName)
     {
         this.player=player;
         this.stateMachine=playerStateMachine;
@@ -29,7 +29,6 @@ public class PlayerState
         startTime=Time.time;
         isAnimationFinished=false;
         hasExited=false;
-        Debug.Log(animBoolName);
     }
 
     public virtual void Exit()

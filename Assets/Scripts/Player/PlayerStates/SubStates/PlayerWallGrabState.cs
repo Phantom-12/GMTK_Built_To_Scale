@@ -9,7 +9,7 @@ public class PlayerWallGrabState : PlayerTouchingWallState
     private int yInput;
     private bool grabInput;
 
-    public PlayerWallGrabState(Player player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
+    public PlayerWallGrabState(PlayerMoveController player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
     {
     }
 

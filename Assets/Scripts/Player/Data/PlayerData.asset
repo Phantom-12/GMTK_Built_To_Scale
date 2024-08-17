@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 10
   jumpVelocity: 15
-  maxJumpTimes: 2
+  maxJumpTimes: 1
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 1
   wallSlideVelocity: -2

@@ -6,7 +6,7 @@ public class PlayerJumpState : PlayerAbilityState
 {
     private int jumpTimesLeft;
 
-    public PlayerJumpState(Player player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
+    public PlayerJumpState(PlayerMoveController player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
     {
         jumpTimesLeft=playerData.maxJumpTimes;
     }

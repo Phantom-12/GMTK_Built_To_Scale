@@ -12,7 +12,7 @@ public class PlayerLedgeClimbState : PlayerState
     private bool isHanging,isClimbing;
     private bool isTouchingCeiling;
 
-    public PlayerLedgeClimbState(Player player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
+    public PlayerLedgeClimbState(PlayerMoveController player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
     {
     }
 
