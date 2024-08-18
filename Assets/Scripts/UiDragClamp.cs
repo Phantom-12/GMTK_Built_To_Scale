@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,18 +17,17 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     // 最小、最大X、Y坐标
     float minX, maxX;
     //float minY, maxY;
-
-    void Start()
+    public void Init()
     {
         foreach (RectTransform t in ScaleRectTransforms)
         {
             if (t.name == "1")
             {
-                t.gameObject.SetActive(ResolutionScalerManager.Instance.GetResolutionRatioEnable(t.name));
+                t.gameObject.SetActive(GameData.Instance.GetResolutionRatioEnable(Convert.ToInt32(t.name)));
             }
             if (t.name != "1") 
             {
-                t.gameObject.SetActive(!ResolutionScalerManager.Instance.GetResolutionRatioEnable(t.name));
+                t.gameObject.SetActive(!GameData.Instance.GetResolutionRatioEnable(Convert.ToInt32(t.name)));
             }
         }
         rt = GetComponent<RectTransform>();
@@ -51,7 +51,7 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (RectTransformUtility.ScreenPointToWorldPointInRectangle(rt, eventData.position, eventData.pressEventCamera, out Vector3 globalMousePos))
         {
             rt.position = new Vector3(DragRangeLimit(globalMousePos).x, rt.position.y, rt.position.z);
-            print(container.localScale.x);
+            // print(container.localScale.x);
         }
     }
 
@@ -132,8 +132,8 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     Vector3 DragRangeLimit(Vector3 pos)
     {
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
-        print(minX);
-        print(maxX);
+        // print(minX);
+        // print(maxX);
         //pos.y = Mathf.Clamp(pos.y, minY, maxY);
         return pos;
     }
