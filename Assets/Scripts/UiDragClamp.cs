@@ -8,7 +8,6 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 {
     [Header("UI限制拖拽位置")]
     public RectTransform container;
-    private ResolutionScalerManager resolutionScalerManager;
     RectTransform rt;
     public RectTransform[] ScaleRectTransforms;
 
@@ -17,21 +16,18 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     // 最小、最大X、Y坐标
     float minX, maxX;
     //float minY, maxY;
-    void Awake()
-    {
-        resolutionScalerManager = GameObject.Find("ResolutionScalerManager").GetComponent<ResolutionScalerManager>();
-    }
+
     void Start()
     {
         foreach (RectTransform t in ScaleRectTransforms)
         {
             if (t.name == "1")
             {
-                t.gameObject.SetActive(resolutionScalerManager.GetResolutionRatioEnable(t.name));
+                t.gameObject.SetActive(ResolutionScalerManager.Instance.GetResolutionRatioEnable(t.name));
             }
             if (t.name != "1") 
             {
-                t.gameObject.SetActive(!resolutionScalerManager.GetResolutionRatioEnable(t.name));
+                t.gameObject.SetActive(!ResolutionScalerManager.Instance.GetResolutionRatioEnable(t.name));
             }
         }
         rt = GetComponent<RectTransform>();

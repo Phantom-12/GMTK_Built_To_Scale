@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public float musicVol, effectsVol;
+    public float musicVol, effectsVol, MasterVol;
     public static SoundManager Instance;
     private float timer;
     [Serializable]
@@ -33,10 +33,11 @@ public class SoundManager : MonoBehaviour
         }
         musicVol = _musicSource.volume;
         effectsVol = _effectsSource.volume;
+        MasterVol = _MasterSource.volume;
     }
 
 
-    [SerializeField] private AudioSource _musicSource, _effectsSource;
+    [SerializeField] private AudioSource _musicSource, _effectsSource, _MasterSource;
 
     private void Awake()
     {
@@ -94,7 +95,7 @@ public class SoundManager : MonoBehaviour
         return musicVol;
     }
 
-    public void ChangeVolumeEffects(float value)
+    public void ChangeVolumeEffect(float value)
     {
         _effectsSource.volume = value;
         effectsVol = value;
@@ -102,6 +103,15 @@ public class SoundManager : MonoBehaviour
     public float ReturnVolumeEffect()
     {
         return effectsVol;
+    }
+    public void ChangeVolumeMaster(float value)
+    {
+        _MasterSource.volume = value;
+        MasterVol = value;
+    }
+    public float ReturnVolumeMaster()
+    {
+        return MasterVol;
     }
 
     public void ToggleEffects()
