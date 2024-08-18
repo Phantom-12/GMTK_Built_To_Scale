@@ -22,7 +22,14 @@ public class PauseStateChangedEventArgs : EventArgs
 public class GameData
 {
     // 分辨率及其变化事件
-    private int resolutionRatio = 16; // 1 2 4 8 16
+    private int resolutionRatio = 0; // 1 2 4 8 16
+    private Dictionary<int, bool> resolutionRatioEnable = new(){
+        {16,true},
+        {8,true},
+        {4,true},
+        {2,true},
+        {1,true},
+    };
     public event EventHandler<ResolutionRatioChangedEventArgs> ResolutionRatioChangedEvent;
 
     // 暂停及其改变事件
@@ -52,21 +59,53 @@ public class GameData
 
     public void SetResolutionRatio(int resolutionRatio)
     {
-        int[] posibleVal = { 1, 2, 4, 8, 16 };
-        if (!posibleVal.Contains(resolutionRatio))
+        if (!resolutionRatioEnable.ContainsKey(resolutionRatio))
         {
             Debug.LogError("只能设置分辨率为1,2,4,8,16之一，你设置了" + resolutionRatio);
+            return;
+        }
+        if (!resolutionRatioEnable[resolutionRatio])
+        {
+            Debug.Log("设置了暂时不能使用的值：" + resolutionRatio);
             return;
         }
         if (this.resolutionRatio == resolutionRatio)
             return;
         ResolutionRatioChangedEventArgs args = new()
         {
-            PrevResolutionRatio = this.resolutionRatio,
+            PrevResolutionRatio = resolutionRatioEnable.ContainsKey(this.resolutionRatio) ? this.resolutionRatio : resolutionRatio,
             CurResolutionRatio = resolutionRatio
         };
         this.resolutionRatio = resolutionRatio;
         OnResolutionRatioChanged(args);
+    }
+
+    public void InitResolutonRatio(List<int> avaliableResolutionRatios, int startResolutionRatio)
+    {
+        resolutionRatio = 0;
+        var keys = new List<int>(resolutionRatioEnable.Keys);
+        for (int i = 0; i < keys.Count; i++)
+            resolutionRatioEnable[keys[i]] = false;
+        foreach (var i in avaliableResolutionRatios)
+        {
+            if (!resolutionRatioEnable.ContainsKey(i))
+            {
+                Debug.LogError("只能初始化分辨率为1,2,4,8,16之一，你设置了" + i);
+                return;
+            }
+            resolutionRatioEnable[i] = true;
+        }
+        SetResolutionRatio(startResolutionRatio);
+    }
+
+    public void ChangeResolutionRatioEnable(int ratio)
+    {
+        resolutionRatioEnable[ratio] = true;
+    }
+
+    public bool GetResolutionRatioEnable(int ratio)
+    {
+        return resolutionRatioEnable[ratio];
     }
 
     private void OnPauseStateChanged(PauseStateChangedEventArgs args)

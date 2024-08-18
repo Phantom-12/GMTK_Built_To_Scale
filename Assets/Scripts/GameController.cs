@@ -5,6 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("1,2,4,8,16")]
+    List<int> avaliableResolutionRatios;
+    [SerializeField]
+    int startResolutionRatio;
+
     private GameController() { }
     public static GameController Instance { get; private set; }
 
@@ -24,9 +30,9 @@ public class GameController : MonoBehaviour
             name2Tilemap.Add(t.name, t.transform);
             t.gameObject.SetActive(false);
         }
-        name2Tilemap[GetTilemapNameById(GameData.Instance.GetResolutionRatio())].gameObject.SetActive(true);
-        GameData.Instance.SetResolutionRatio(16);
         SetPause(false);
+        GameData.Instance.InitResolutonRatio(avaliableResolutionRatios, startResolutionRatio);
+        FindFirstObjectByType<UIDragClamp>().Init();
     }
 
     private void OnDestroy()
@@ -36,23 +42,28 @@ public class GameController : MonoBehaviour
 
     private void OnResolutionRatioChanged(object sender, ResolutionRatioChangedEventArgs args)
     {
+        if (args.CurResolutionRatio == args.PrevResolutionRatio)
+        {
+            name2Tilemap[GetMapTilemapName(args.PrevResolutionRatio)].gameObject.SetActive(true);
+            return;
+        }
         StopAllCoroutines();
         foreach (var transform in name2Tilemap.Values)
             transform.gameObject.SetActive(false);
         GameObject fromObj, toObj;
-        fromObj = name2Tilemap[GetTilemapNameById(args.PrevResolutionRatio)].gameObject;
-        toObj = name2Tilemap[GetTilemapNameById(args.CurResolutionRatio)].gameObject;
+        fromObj = name2Tilemap[GetMapTilemapName(args.PrevResolutionRatio)].gameObject;
+        toObj = name2Tilemap[GetMapTilemapName(args.CurResolutionRatio)].gameObject;
         fromObj.SetActive(true);
         toObj.SetActive(true);
         fromObj.GetComponent<TilemapCollider2D>().enabled = false;
         toObj.GetComponent<TilemapCollider2D>().enabled = true;
-        StartCoroutine(PlayTransformAnim(fromObj, toObj));
+        StartCoroutine(PlayTransitionAnim(fromObj, toObj));
     }
 
-    IEnumerator PlayTransformAnim(GameObject fromObj, GameObject toObj)
+    IEnumerator PlayTransitionAnim(GameObject fromObj, GameObject toObj)
     {
-        float deltaAlpha = 0.04f;
-        float deltaTime = 0.02f;
+        float deltaAlpha = GlobalParam.transformAnimDeltaAlpha;
+        float deltaTime = GlobalParam.transformAnimDeltaTime;
         Tilemap tilemapFrom, tilemapTo;
         Color colorFrom, colorTo;
         tilemapFrom = fromObj.GetComponent<Tilemap>();
@@ -74,7 +85,7 @@ public class GameController : MonoBehaviour
         fromObj.SetActive(false);
     }
 
-    private string GetTilemapNameById(int id)
+    private string GetMapTilemapName(int id)
     {
         return "Tilemap_" + id + "x";
     }
