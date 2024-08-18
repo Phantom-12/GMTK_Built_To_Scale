@@ -55,6 +55,7 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (RectTransformUtility.ScreenPointToWorldPointInRectangle(rt, eventData.position, eventData.pressEventCamera, out Vector3 globalMousePos))
         {
             rt.position = new Vector3(DragRangeLimit(globalMousePos).x, rt.position.y, rt.position.z);
+            print(container.localScale.x);
         }
     }
 
@@ -126,6 +127,8 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             //minY = rt.rect.height * rt.pivot.y;
             //maxY = Screen.height - rt.rect.height * (1 - rt.pivot.y);
         }
+        minX -= (maxX - minX) * (container.localScale.x - 1f) /2;
+        maxX += (maxX - minX) * (container.localScale.x - 1f) /2;
     }
 
 
@@ -133,6 +136,8 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     Vector3 DragRangeLimit(Vector3 pos)
     {
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        print(minX);
+        print(maxX);
         //pos.y = Mathf.Clamp(pos.y, minY, maxY);
         return pos;
     }
