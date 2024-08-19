@@ -6,15 +6,26 @@ using UnityEngine.UI;
 public class ChooseLevel : MonoBehaviour
 {
     public GameObject[] Levels;
+    public GameObject[] LevelsCollection;
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("L1", 1);
+    }
     // Start is called before the first frame update
     void Start()
     {
         foreach (GameObject level in Levels)
         {
-            level.GetComponent<Button>().interactable = ResolutionScalerManager.Instance.GetLevelEnable(level.name);
-            if (ResolutionScalerManager.Instance.GetLevelEnable(level.name))
+            if(PlayerPrefs.GetInt("L"+level.name,0) == 1)
             {
-                level.GetComponent<Image>().color = Color.white;
+                level.SetActive(true);
+            }  
+        }
+        foreach (GameObject levelcollection in LevelsCollection)
+        {
+            if (PlayerPrefs.GetInt("LC" + levelcollection.name, 0) == 1)
+            {
+                levelcollection.SetActive(true);
             }
         }
     }

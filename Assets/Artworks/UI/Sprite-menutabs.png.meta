@@ -1,0 +1,1539 @@
+fileFormatVersion: 2
+guid: 171b2ab646f8e144c9956e02faaac807
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite-menutabs_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 205
+        width: 275
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2288d6ab443778e43af5299de9bad76a
+      internalID: 1212344735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_13
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 236
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c65ca93e01da454e98a18b02c3d1500
+      internalID: 2049395966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_14
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 236
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c6f8ddbca13f446bb55cf90b93e9d3
+      internalID: -920762181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_15
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 236
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21263a52753d73439a5e8e9adacaaee
+      internalID: 1920990913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_16
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 236
+        width: 43
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc916227c1c65847a6545bcf2a526ca
+      internalID: 903863190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 222
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ba93bd791767f4f9d965134f8a07e4
+      internalID: 200503841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_18
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 222
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69969cac8de85f488d06484671c87b1
+      internalID: 1754758453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_19
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 222
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e9a5ccd85850a4b8ccad4ef6bb57b9
+      internalID: 1520528837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_20
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 222
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a39a7abe4c4cc48956d0a952c76729
+      internalID: -1378772107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_21
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 165
+        width: 184
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a04601ad1e9ccb4783454c75afe8034
+      internalID: -374078028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_22
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 165
+        width: 118
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115f1997c5f1a484484539df1d0fa3e1
+      internalID: -553362908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_23
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2024629ae19b6634099350241b2e05f9
+      internalID: 1380132837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_24
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613ecca4cdc32d643b9c784cb44b1f2e
+      internalID: 2027238046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_25
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa033b73d783734389567e5c1b65e33
+      internalID: 565119123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_26
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c6514bf8a1f0347a1d1df04fdf5a16
+      internalID: -895142524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_27
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 134
+        width: 177
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3890a18d02967f5448981bbe4cd9d03d
+      internalID: 1365552279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_34
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 134
+        width: 111
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4476c12f5679b144aa7671d2a51bb8e
+      internalID: 746503707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_37
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 129
+        width: 89
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1645598a7c63584092a04656abad77a
+      internalID: -969834131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_38
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 140
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5248c9280eec5d64ea4b50fa1b8a01ed
+      internalID: 1043551094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_39
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 140
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6a1ffa357db5a4997614ea580ccc1f
+      internalID: 471542545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_40
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 140
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377d2ee417ce2914cb66757d15aebb95
+      internalID: 1397405307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_41
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 140
+        width: 35
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d66936365d09e4ba6874f3b7c7d77f
+      internalID: 1995894362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_42
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 116
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20522783660a51141a62d65c0c571663
+      internalID: 1531685961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_44
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 94
+        width: 118
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0714b93807e9c1349864564cae9bfb4d
+      internalID: -1484322337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_45
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 109
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adec14d8c182574fbc5350914e0228e
+      internalID: -2049203255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_46
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 109
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b182c5a0f044c4c8284039bcb2f433
+      internalID: -418256426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_47
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 109
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd427d1f54170546bc4bad11c84e83c
+      internalID: -887600228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_48
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 109
+        width: 43
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e962e6cce178a4db61f7a2511264f3
+      internalID: 1167363705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_49
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 96
+        width: 89
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e922a46c24da3f046a606b52a73c7472
+      internalID: -392477232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_50
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 96
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed86b85c8497fdf488963be2a099f62a
+      internalID: 1403366956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_51
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 78
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09d2e6d24209ff44aeeb4d50cacbe3a
+      internalID: 673018810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_52
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 98
+        width: 81
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0727e92b284360d4d9172ec33179865e
+      internalID: 1311683512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_54
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 95
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1ff27503b96f74eb844732e279822f
+      internalID: 1583008047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_55
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 95
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a51ec6139db69a4da96a4faa9a7020e
+      internalID: 1762313252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_56
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 97
+        width: 76
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a75d6b1f43b1f349b9a7a2854e3ae50
+      internalID: -985520275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_57
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 95
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aca51a51f1536c4ea35a9b75ac5dab6
+      internalID: 1151278271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_58
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 95
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e6536a3d7782648bc94d5da3ef77ed
+      internalID: -115918628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_59
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 77
+        width: 72
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d113ee8aba95f3a49803ccfbf3eed884
+      internalID: -1301421576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_61
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 63
+        width: 111
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1ec3dca59b2b44a9d2509028f2a2c4
+      internalID: 208695412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_62
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 60
+        width: 103
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048582dfb7ccf9945965828def3124bf
+      internalID: 1195534620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_63
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 58
+        width: 68
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d8b1bd175068b44bde125fa33f6b8c
+      internalID: -314539615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_64
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 50
+        width: 5
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ddc69f15458734b9b451f3c37014c1
+      internalID: -1907934923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_65
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 50
+        width: 5
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b93b14771a24a0449de173651ec642c
+      internalID: -1624465075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_66
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 50
+        width: 5
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f5402e1dec5c64f82db23342406a1e
+      internalID: -103257336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_67
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 50
+        width: 5
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ef7157d610726498262f2e080d4b28
+      internalID: 125075311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_68
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 57
+        width: 89
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb78e87bb95e224ab460c925f3f84a4
+      internalID: 864592534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_69
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 57
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96544aff4a076442b2a9a71687666f4
+      internalID: 1592822396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_70
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 40
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c69cf92b5928044a8d3825cab80197f
+      internalID: 46537731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_71
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 38
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c3e6ccdf53e8d4cb1cb6673491305c
+      internalID: 89968444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_72
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 29
+        width: 96
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e33df89d6c57649890120824a804af
+      internalID: 190905385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_74
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 27
+        width: 61
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c19da5922f4f249b3a601f055ccc1e
+      internalID: -517120901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_77
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29aaca3d175e5324b8f79c14dc02928e
+      internalID: -753731703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_78
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 39
+        width: 76
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd085b8fcf6323c4cafe6bbabd6d3e9c
+      internalID: -24889710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_79
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2c62c6027d06543880fd22c11e0458
+      internalID: -895634916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_80
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd0e769289c0f64a9ad6b2fefb66396
+      internalID: 1784718493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_81
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 39
+        width: 76
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74151a7ebf33a86439e98a2757fc60f2
+      internalID: 2068844194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_82
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2f1016b98571e41a0c7548cd3eb4ba
+      internalID: 159156266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_83
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 18
+        width: 89
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9910b1558c7d18a4096467c6426a9928
+      internalID: -949854399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_84
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 18
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77fa557819c5a464d9619375991c6bdc
+      internalID: 242209690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_85
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 13
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899cb6f23a2a48545b653ab0647a3750
+      internalID: 59085348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_86
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 13
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac622ab9b3cae924d81aacc40a7eba7a
+      internalID: 107301544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_87
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 13
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9fda0dd2161c64a80be65367b78a70
+      internalID: 1281057373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-menutabs_88
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 13
+        width: 35
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36df25edcb90cb449e61bf510afebbf
+      internalID: -667521273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprite-menutabs_0: 1212344735
+      Sprite-menutabs_1: 117076124
+      Sprite-menutabs_10: 757653296
+      Sprite-menutabs_11: -1832254129
+      Sprite-menutabs_12: -515837511
+      Sprite-menutabs_13: 2049395966
+      Sprite-menutabs_14: -920762181
+      Sprite-menutabs_15: 1920990913
+      Sprite-menutabs_16: 903863190
+      Sprite-menutabs_17: 200503841
+      Sprite-menutabs_18: 1754758453
+      Sprite-menutabs_19: 1520528837
+      Sprite-menutabs_2: -889600935
+      Sprite-menutabs_20: -1378772107
+      Sprite-menutabs_21: -374078028
+      Sprite-menutabs_22: -553362908
+      Sprite-menutabs_23: 1380132837
+      Sprite-menutabs_24: 2027238046
+      Sprite-menutabs_25: 565119123
+      Sprite-menutabs_26: -895142524
+      Sprite-menutabs_27: 1365552279
+      Sprite-menutabs_28: 1730120956
+      Sprite-menutabs_29: -1146193028
+      Sprite-menutabs_3: -531669040
+      Sprite-menutabs_30: 1021887295
+      Sprite-menutabs_31: 776311774
+      Sprite-menutabs_32: -758632730
+      Sprite-menutabs_33: 694855226
+      Sprite-menutabs_34: 746503707
+      Sprite-menutabs_35: -454236380
+      Sprite-menutabs_36: -1592893883
+      Sprite-menutabs_37: -969834131
+      Sprite-menutabs_38: 1043551094
+      Sprite-menutabs_39: 471542545
+      Sprite-menutabs_4: 1390900111
+      Sprite-menutabs_40: 1397405307
+      Sprite-menutabs_41: 1995894362
+      Sprite-menutabs_42: 1531685961
+      Sprite-menutabs_43: -34462934
+      Sprite-menutabs_44: -1484322337
+      Sprite-menutabs_45: -2049203255
+      Sprite-menutabs_46: -418256426
+      Sprite-menutabs_47: -887600228
+      Sprite-menutabs_48: 1167363705
+      Sprite-menutabs_49: -392477232
+      Sprite-menutabs_5: -790394138
+      Sprite-menutabs_50: 1403366956
+      Sprite-menutabs_51: 673018810
+      Sprite-menutabs_52: 1311683512
+      Sprite-menutabs_53: 1866474554
+      Sprite-menutabs_54: 1583008047
+      Sprite-menutabs_55: 1762313252
+      Sprite-menutabs_56: -985520275
+      Sprite-menutabs_57: 1151278271
+      Sprite-menutabs_58: -115918628
+      Sprite-menutabs_59: -1301421576
+      Sprite-menutabs_6: 2013639281
+      Sprite-menutabs_60: 14095125
+      Sprite-menutabs_61: 208695412
+      Sprite-menutabs_62: 1195534620
+      Sprite-menutabs_63: -314539615
+      Sprite-menutabs_64: -1907934923
+      Sprite-menutabs_65: -1624465075
+      Sprite-menutabs_66: -103257336
+      Sprite-menutabs_67: 125075311
+      Sprite-menutabs_68: 864592534
+      Sprite-menutabs_69: 1592822396
+      Sprite-menutabs_7: -153841731
+      Sprite-menutabs_70: 46537731
+      Sprite-menutabs_71: 89968444
+      Sprite-menutabs_72: 190905385
+      Sprite-menutabs_73: -1647584669
+      Sprite-menutabs_74: -517120901
+      Sprite-menutabs_75: 382903701
+      Sprite-menutabs_76: -1652410243
+      Sprite-menutabs_77: -753731703
+      Sprite-menutabs_78: -24889710
+      Sprite-menutabs_79: -895634916
+      Sprite-menutabs_8: 698926378
+      Sprite-menutabs_80: 1784718493
+      Sprite-menutabs_81: 2068844194
+      Sprite-menutabs_82: 159156266
+      Sprite-menutabs_83: -949854399
+      Sprite-menutabs_84: 242209690
+      Sprite-menutabs_85: 59085348
+      Sprite-menutabs_86: 107301544
+      Sprite-menutabs_87: 1281057373
+      Sprite-menutabs_88: -667521273
+      Sprite-menutabs_9: 1664458868
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
