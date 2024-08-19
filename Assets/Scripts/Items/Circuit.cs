@@ -73,10 +73,24 @@ public class Circuit : SerializedMonoBehaviour
         }
         if (args.CurResolutionRatio <= 4 && !connected)
             Connect();
-        PlayTransitionAnim(args.CurResolutionRatio, args.PrevResolutionRatio);
+        else if (args.CurResolutionRatio > 4 && connected)
+            Disconnect();
+
+        GameObject fromObj, toObj;
+        if (!connected)
+        {
+            fromObj = disconnectedTilemaps[args.PrevResolutionRatio].gameObject;
+            toObj = disconnectedTilemaps[args.CurResolutionRatio].gameObject;
+        }
+        else
+        {
+            fromObj = connectedTilemaps[args.PrevResolutionRatio].gameObject;
+            toObj = connectedTilemaps[args.CurResolutionRatio].gameObject;
+        }
+        PlayTransitionAnim(args.CurResolutionRatio, args.PrevResolutionRatio, fromObj, toObj);
     }
 
-    private void PlayTransitionAnim(int curResolutionRatio, int prevResolutionRatio)
+    private void PlayTransitionAnim(int curResolutionRatio, int prevResolutionRatio, GameObject fromObj, GameObject toObj)
     {
         if (curResolutionRatio == prevResolutionRatio)
             return;
@@ -87,17 +101,6 @@ public class Circuit : SerializedMonoBehaviour
         foreach (var i in connectedTilemaps.Values)
             if (i)
                 i.gameObject.SetActive(false);
-        GameObject fromObj, toObj;
-        if (!connected)
-        {
-            fromObj = disconnectedTilemaps[prevResolutionRatio].gameObject;
-            toObj = disconnectedTilemaps[curResolutionRatio].gameObject;
-        }
-        else
-        {
-            fromObj = connectedTilemaps[prevResolutionRatio].gameObject;
-            toObj = connectedTilemaps[curResolutionRatio].gameObject;
-        }
         fromObj.SetActive(true);
         toObj.SetActive(true);
         StartCoroutine(PlayTransitionAnim(fromObj, toObj));
@@ -136,5 +139,15 @@ public class Circuit : SerializedMonoBehaviour
         if (connectedTilemaps[GameData.Instance.GetResolutionRatio()])
             connectedTilemaps[GameData.Instance.GetResolutionRatio()].gameObject.SetActive(true);
         mechanicalGate.UnlockByCircuit();
+    }
+
+    private void Disconnect()
+    {
+        connected = false;
+        if (connectedTilemaps[GameData.Instance.GetResolutionRatio()])
+            connectedTilemaps[GameData.Instance.GetResolutionRatio()].gameObject.SetActive(false);
+        if (disconnectedTilemaps[GameData.Instance.GetResolutionRatio()])
+            disconnectedTilemaps[GameData.Instance.GetResolutionRatio()].gameObject.SetActive(true);
+        mechanicalGate.LockByCircuit();
     }
 }

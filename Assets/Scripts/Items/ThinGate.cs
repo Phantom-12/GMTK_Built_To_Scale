@@ -14,6 +14,8 @@ public class ThinGate : SerializedMonoBehaviour
         {2,null},
         {1,null},
     };
+    [SerializeField]
+    private int disappearThreshold;
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2D;
@@ -39,7 +41,7 @@ public class ThinGate : SerializedMonoBehaviour
     private void OnResolutionRatioChanged(object sender, ResolutionRatioChangedEventArgs args)
     {
         spriteRenderer.sprite = sprites[args.CurResolutionRatio];
-        if (args.CurResolutionRatio <= 2)
+        if (args.CurResolutionRatio <= disappearThreshold)
             boxCollider2D.enabled = false;
         else
             boxCollider2D.enabled = true;

@@ -15,15 +15,19 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
 
     private readonly Dictionary<string, Transform> name2Tilemap = new();
+    private readonly Dictionary<Transform, List<Transform>> tilemap2Children = new();
 
     private void Awake()
     {
         PlayerPrefs.SetInt("16x", 1);
+        PlayerPrefs.SetInt("8x", 1);
+        PlayerPrefs.SetInt("4x", 1);
+        PlayerPrefs.SetInt("2x", 1);
         Instance = this;
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
-        for(int i = 0;i < avaliableResolutionRatios.Count;)
+        for (int i = 0; i < avaliableResolutionRatios.Count;)
         {
-            if (PlayerPrefs.GetInt(avaliableResolutionRatios[i].ToString()+"x", 0) == 1)
+            if (PlayerPrefs.GetInt(avaliableResolutionRatios[i].ToString() + "x", 0) == 1)
             {
                 i++;
             }
@@ -36,11 +40,17 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        var sceneMaps = GameObject.Find("SceneMaps").GetComponentsInChildren<Tilemap>();
-        foreach (var t in sceneMaps)
+        var sceneMaps = GameObject.Find("SceneMaps");
+        for (var i = 0; i < sceneMaps.transform.childCount; i++)
         {
+            var t = sceneMaps.transform.GetChild(i);
             name2Tilemap.Add(t.name, t.transform);
+            tilemap2Children.Add(t, new());
+            var children = t.GetComponentsInChildren<Tilemap>();
+            foreach (var c in children)
+                tilemap2Children[t].Add(c.transform);
             t.gameObject.SetActive(false);
+
         }
         SetPause(false);
         GameData.Instance.InitResolutonRatio(avaliableResolutionRatios, startResolutionRatio);
@@ -91,7 +101,21 @@ public class GameController : MonoBehaviour
             colorFrom.a -= deltaAlpha;
             colorTo.a += deltaAlpha;
             tilemapFrom.color = colorFrom;
+            foreach (var t in tilemap2Children[fromObj.transform])
+            {
+                var tilemap = t.GetComponent<Tilemap>();
+                var color = tilemap.color;
+                color.a = colorFrom.a;
+                tilemap.color = color;
+            }
             tilemapTo.color = colorTo;
+            foreach (var t in tilemap2Children[toObj.transform])
+            {
+                var tilemap = t.GetComponent<Tilemap>();
+                var color = tilemap.color;
+                color.a = colorTo.a;
+                tilemap.color = color;
+            }
             yield return new WaitForSeconds(deltaTime);
         }
         fromObj.SetActive(false);

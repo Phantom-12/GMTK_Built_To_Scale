@@ -102,6 +102,12 @@ public class MechanicalGate : SerializedMonoBehaviour
         CheckLocked();
     }
 
+    public void LockByCircuit()
+    {
+        lockedByCircuit = true;
+        CheckLocked();
+    }
+
     public void UnlockByKey()
     {
         lockedByKey = false;
@@ -110,10 +116,9 @@ public class MechanicalGate : SerializedMonoBehaviour
 
     private bool CheckLocked()
     {
-        if (lockedByCircuit || lockedByKey)
-            return true;
-        spriteRenderer.sprite = unlockedSprites[GameData.Instance.GetResolutionRatio()];
-        boxCollider2D.enabled = false;
-        return false;
+        bool locked = lockedByCircuit || lockedByKey;
+        spriteRenderer.sprite = locked ? lockedSprites[GameData.Instance.GetResolutionRatio()] : unlockedSprites[GameData.Instance.GetResolutionRatio()];
+        boxCollider2D.enabled = locked;
+        return locked;
     }
 }
