@@ -13,4 +13,9 @@ public class TESTBUTTON : MonoBehaviour
     {
         GameController.Instance.SetPause(enable);
     }
+
+    public void RestartScene()
+    {
+        LevelManager.Instance.RestartScene();
+    }
 }

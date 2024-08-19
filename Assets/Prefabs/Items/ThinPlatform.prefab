@@ -236,6 +236,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  disappearThreshold: 2
 --- !u!1001 &5423835897046202968
 PrefabInstance:
   m_ObjectHideFlags: 0
