@@ -37,7 +37,7 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    [SerializeField] private AudioSource _musicSource, _effectsSource, _MasterSource;
+    [SerializeField] private AudioSource _musicSource, _effectsSource, _MasterSource, x16, x8, x4, x2;
 
     private void Awake()
     {
@@ -55,13 +55,60 @@ public class SoundManager : MonoBehaviour
 
     public void MusicPlayClip(AudioClip clip)
     {
-        if (_musicSource.clip != null) soundTime[_musicSource.clip] = _musicSource.time;
+        //if (_musicSource.clip != null) soundTime[_musicSource.clip] = _musicSource.time;
         _musicSource.Stop();
         _musicSource.clip = clip;
         _musicSource.Play();
-        _musicSource.time = soundTime[clip];
+        //_musicSource.time = soundTime[clip];
     }
-
+    public void PlaySound()
+    {
+        x16.volume = _musicSource.volume;
+        x8.volume = _musicSource.volume;
+        x4.volume = _musicSource.volume;
+        x2.volume = _musicSource.volume;
+        x16.Play();
+        x8.Play();
+        x4.Play();
+        x2.Play();
+    }
+    public void MuteSound(int ratio)
+    {
+        switch (ratio)
+        {
+            case 16:
+                x16.mute = true; break;
+            case 8:
+                x8.mute = true; break;
+            case 4:
+                x4.mute = true; break;
+            case 2:
+                x2.mute = true; break;
+            default: break;
+        }
+    }
+    public void ReleaseMuteSound(int ratio)
+    {
+        switch (ratio)
+        {
+            case 16:
+                x16.mute = false; break;
+            case 8:
+                x8.mute = false; break;
+            case 4:
+                x4.mute = false; break;
+            case 2:
+                x2.mute = false; break;
+            default: break;
+        }
+    }
+    public void StopSound()
+    {
+        x16.Stop();
+        x8.Stop();
+        x4.Stop();
+        x2.Stop();
+    }
     public void EffectPlayClip(AudioClip clip)
     {
         _effectsSource.Stop();
@@ -77,12 +124,12 @@ public class SoundManager : MonoBehaviour
     }
     public void MusicStop()
     {
-        timer = _musicSource.time;
+        //timer = _musicSource.time;
         _musicSource.Stop();
     }
     public void MusicPlay()
     {
-        _musicSource.time = timer;
+        //_musicSource.time = timer;
         _musicSource.Play();
     }
     public void ChangeVolumeMusic(float value)

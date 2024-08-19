@@ -5,15 +5,25 @@ using UnityEngine.UI;
 
 public class MusicPlay : MonoBehaviour
 {
-    Button button;
-    [SerializeField]string musicName;
+    [SerializeField]
+    private bool isGaming;
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(() =>
+        Invoke("chooseMusic",0f);
+    }
+    void chooseMusic()
+    {
+        if (isGaming)
         {
-            SoundManager.Instance.MusicPlayStr(musicName);
-        });
+            SoundManager.Instance.PlaySound();
+            SoundManager.Instance.MusicStop();
+        }
+        if (!isGaming)
+        {
+            SoundManager.Instance.MusicPlayStr("1");
+            SoundManager.Instance.StopSound();
+        }
+
     }
 }

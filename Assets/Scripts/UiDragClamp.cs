@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -88,6 +89,36 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
         }
         rt.position = new Vector3(targetPosition.x, rt.position.y, rt.position.z);
+        switch (int.Parse(targetRadio))
+        {
+            case 16:
+                SoundManager.Instance.ReleaseMuteSound(16);
+                break;
+            case 8:
+                SoundManager.Instance.MuteSound(16);
+                SoundManager.Instance.ReleaseMuteSound(8);
+                break;
+            case 4:
+                SoundManager.Instance.MuteSound(16);
+                SoundManager.Instance.MuteSound(8);
+                SoundManager.Instance.ReleaseMuteSound(4);
+                break;
+            case 2:
+                SoundManager.Instance.MuteSound(16);
+                SoundManager.Instance.MuteSound(8);
+                SoundManager.Instance.MuteSound(4);
+                SoundManager.Instance.ReleaseMuteSound(2);
+                break;
+            default: break;
+        }
+        if(int.Parse(targetRadio) > GameData.Instance.GetResolutionRatio())
+        {
+            SoundManager.Instance.SceneEffectPlayStr("7");
+        }
+        if (int.Parse(targetRadio) < GameData.Instance.GetResolutionRatio())
+        {
+            SoundManager.Instance.SceneEffectPlayStr("8");
+        }
         GameData.Instance.SetResolutionRatio(int.Parse(targetRadio));
     }
     //通过计算忽略Scale和pivot对UI的影响
