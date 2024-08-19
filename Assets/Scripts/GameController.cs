@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("1,2,4,8,16")]
-    List<int> avaliableResolutionRatios;
+    List<int> avaliableResolutionRatios = new List<int>();
     [SerializeField]
     int startResolutionRatio;
 
@@ -18,8 +18,20 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("16x", 1);
         Instance = this;
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
+        for(int i = 0;i < avaliableResolutionRatios.Count;)
+        {
+            if (PlayerPrefs.GetInt(avaliableResolutionRatios[i].ToString()+"x", 0) == 1)
+            {
+                i++;
+            }
+            else
+            {
+                avaliableResolutionRatios.Remove(avaliableResolutionRatios[i]);
+            }
+        }
     }
 
     private void Start()
