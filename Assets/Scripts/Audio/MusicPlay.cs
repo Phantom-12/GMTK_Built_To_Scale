@@ -7,6 +7,8 @@ public class MusicPlay : MonoBehaviour
 {
     [SerializeField]
     private bool isGaming;
+    [SerializeField]
+    private bool iscomic;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,10 @@ public class MusicPlay : MonoBehaviour
         {
             SoundManager.Instance.MusicPlayStr("1");
             SoundManager.Instance.StopSound();
+        }
+        if (iscomic)
+        {
+            SoundManager.Instance.MusicStop();
         }
 
     }

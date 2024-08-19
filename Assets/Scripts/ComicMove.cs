@@ -15,6 +15,7 @@ public class ComicMove : MonoBehaviour
         Invoke("part2", delays[1]);
         Invoke("part3", delays[2]);
         Invoke("part4", delays[3]);
+        Invoke("part5", delays[4]);
     }
     void part1()
     {
@@ -31,5 +32,9 @@ public class ComicMove : MonoBehaviour
     void part4()
     {
         comics[3].GetComponent<Animator>().enabled = true;
+    }
+    void part5()
+    {
+        LevelManager.Instance.SwitchScene("TestScene");
     }
 }

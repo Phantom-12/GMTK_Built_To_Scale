@@ -126,6 +126,7 @@ public class Key : SerializedMonoBehaviour
 
     private void GetKey()
     {
+        SoundManager.Instance.SceneEffectPlayStr("14");
         player.EnableKeyFloaterGold(true);
         lockedDoor.SetHasKey();
         used = true;

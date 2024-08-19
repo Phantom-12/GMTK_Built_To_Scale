@@ -13,6 +13,7 @@ public class PlayerJumpState : PlayerAbilityState
 
     public override void Enter()
     {
+        SoundManager.Instance.SceneEffectPlayStr("15");
         base.Enter();
         player.SetVelocityY(playerData.jumpVelocity);
         DecreaseJumpTimesLeft();

@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
 
     public void OnHit()
     {
+        SoundManager.Instance.SceneEffectPlayStr("11");
         playerMoveController.SetEnable(false);
         playerMoveController.SetVelocity(0, Vector2.zero);
         animator.Play("Hit");

@@ -2,12 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadScene : MonoBehaviour
 {
-    public void Loadscene(string scene)
+    Button button;
+    [SerializeField] string sceneName;
+    [SerializeField] bool rePlayMusic;
+    // Start is called before the first frame update
+    void Start()
     {
-        SceneManager.LoadScene(scene);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(() =>
+        {
+            if(sceneName == "StartScene")
+            {
+                if(rePlayMusic)
+                {
+                    SoundManager.Instance.MusicPlayStr("1");
+                    SoundManager.Instance.StopSound();
+                }
+            }
+            ScreenCapturer.Instance.Do(sceneName);
+        });
     }
     public void Exit()
     {

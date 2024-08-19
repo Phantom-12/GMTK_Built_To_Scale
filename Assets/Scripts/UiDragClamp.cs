@@ -162,7 +162,8 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     // 限制坐标范围
     Vector3 DragRangeLimit(Vector3 pos)
     {
-        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.x = Mathf.Clamp(pos.x, ScaleRectTransforms[0].position.x, ScaleRectTransforms[ScaleRectTransforms.Length - 1].position.x);
+        //pos.x = Mathf.Clamp(pos.x, minX, maxX);
         // print(minX);
         // print(maxX);
         //pos.y = Mathf.Clamp(pos.y, minY, maxY);

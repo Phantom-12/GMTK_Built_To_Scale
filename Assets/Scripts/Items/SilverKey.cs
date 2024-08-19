@@ -127,6 +127,7 @@ public class SilverKey : SerializedMonoBehaviour
 
     private void GetKey()
     {
+        SoundManager.Instance.SceneEffectPlayStr("14");
         player.EnableKeyFloaterSilver(true);
         silverLock.SetHasKey();
         used = true;

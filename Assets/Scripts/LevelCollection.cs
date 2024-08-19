@@ -1,14 +1,13 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
-using System;
 
-public class LockedDoor : SerializedMonoBehaviour
+public class LevelCollection : MonoBehaviour
 {
     [SerializeField]
     [DictionaryDrawerSettings(KeyLabel = "分辨率（不应更改）", ValueLabel = "Sprite")]
-    readonly Dictionary<int, Sprite> lockedSprites = new(){
+    Dictionary<int, Sprite> sprites = new(){
         {16,null},
         {8,null},
         {4,null},
@@ -16,35 +15,27 @@ public class LockedDoor : SerializedMonoBehaviour
         {1,null},
     };
     [SerializeField]
-    [DictionaryDrawerSettings(KeyLabel = "分辨率（不应更改）", ValueLabel = "Sprite")]
-    readonly Dictionary<int, Sprite> unlockedSprites = new(){
-        {16,null},
-        {8,null},
-        {4,null},
-        {2,null},
-        {1,null},
-    };
-    [SerializeField]
-    private readonly bool isNeedkey = true;
-    private bool hasKey = false;
-    private bool locked = true;
-
     private SpriteRenderer spriteRenderer;
-    private Player player;
+    [SerializeField]
+    private string LevelCollectionNumber;
+    private GameObject indicator;
     private GameObject transitionShower;
+
 
     private void Awake()
     {
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        player = FindFirstObjectByType<Player>();
+        indicator = transform.Find("Indicator").gameObject;
         transitionShower = transform.Find("TransitionShower").gameObject;
     }
 
     private void Start()
     {
-        if (!isNeedkey)
-            Unlock();
+        if(PlayerPrefs.GetInt("LC"+LevelCollectionNumber) == 1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -54,12 +45,12 @@ public class LockedDoor : SerializedMonoBehaviour
         switch (GameData.Instance.GetResolutionRatio())
         {
             case 16:
+                GetLevelCollection();
+                break;
             case 8:
             case 4:
             case 2:
             case 1:
-                if (hasKey)
-                    Unlock();
                 break;
         }
     }
@@ -71,10 +62,11 @@ public class LockedDoor : SerializedMonoBehaviour
 
     private void OnResolutionRatioChanged(object sender, ResolutionRatioChangedEventArgs args)
     {
-        if (locked)
-            spriteRenderer.sprite = lockedSprites[args.CurResolutionRatio];
+        spriteRenderer.sprite = sprites[args.CurResolutionRatio];
+        if (args.CurResolutionRatio == 16)
+            indicator.SetActive(true);
         else
-            spriteRenderer.sprite = unlockedSprites[args.CurResolutionRatio];
+            indicator.SetActive(false);
         PlayTransitionAnim(args.CurResolutionRatio, args.PrevResolutionRatio);
     }
 
@@ -86,10 +78,7 @@ public class LockedDoor : SerializedMonoBehaviour
         GameObject fromObj, toObj;
         fromObj = transitionShower;
         toObj = gameObject;
-        if (locked)
-            fromObj.GetComponent<SpriteRenderer>().sprite = lockedSprites[prevResolutionRatio];
-        else
-            fromObj.GetComponent<SpriteRenderer>().sprite = unlockedSprites[prevResolutionRatio];
+        fromObj.GetComponent<SpriteRenderer>().sprite = sprites[prevResolutionRatio];
         StartCoroutine(TransitionAnim(fromObj, toObj));
     }
 
@@ -118,16 +107,10 @@ public class LockedDoor : SerializedMonoBehaviour
         fromObj.SetActive(false);
     }
 
-    public void SetHasKey()
+    private void GetLevelCollection()
     {
-        hasKey = true;
-    }
-
-    private void Unlock()
-    {
-        SoundManager.Instance.SceneEffectPlayStr("9");
-        locked = false;
-        spriteRenderer.sprite = unlockedSprites[GameData.Instance.GetResolutionRatio()];
-        player.EnableKeyFloaterGold(false);
+        SoundManager.Instance.SceneEffectPlayStr("14");
+        PlayerPrefs.SetInt("LC" + LevelCollectionNumber, 1);
+        Destroy(gameObject);
     }
 }

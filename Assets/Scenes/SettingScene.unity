@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 77675924}
   - component: {fileID: 77675923}
   - component: {fileID: 77675922}
-  - component: {fileID: 77675921}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -178,18 +177,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &77675921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77675920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cf2871f3e848dc469a1f3664314180b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &77675922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +430,7 @@ GameObject:
   - component: {fileID: 422603659}
   - component: {fileID: 422603658}
   - component: {fileID: 422603661}
+  - component: {fileID: 422603662}
   m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
@@ -513,7 +501,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 77675921}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: Loadscene
         m_Mode: 5
@@ -576,6 +564,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectName: 10
+--- !u!114 &422603662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422603656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf2871f3e848dc469a1f3664314180b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: StartScene
 --- !u!1 &529889677
 GameObject:
   m_ObjectHideFlags: 0

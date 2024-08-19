@@ -133,6 +133,7 @@ public class Circuit : SerializedMonoBehaviour
 
     private void Connect()
     {
+        SoundManager.Instance.SceneEffectPlayStr("12");
         connected = true;
         if (disconnectedTilemaps[GameData.Instance.GetResolutionRatio()])
             disconnectedTilemaps[GameData.Instance.GetResolutionRatio()].gameObject.SetActive(false);
