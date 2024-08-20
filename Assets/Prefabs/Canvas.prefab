@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StartScene
+  rePlayMusic: 0
 --- !u!1 &4784855437292873353
 GameObject:
   m_ObjectHideFlags: 0
