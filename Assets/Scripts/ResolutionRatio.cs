@@ -6,6 +6,7 @@ public class ResolutionRatio : MonoBehaviour
 {
     [SerializeField]
     private string resolutionRationumber;
+    private UIDragClamp uiDragClamp;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,7 @@ public class ResolutionRatio : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        uiDragClamp = GameObject.Find("ResolutionSlider").GetComponent<UIDragClamp>();
     }
 
     // Update is called once per frame
@@ -28,7 +30,8 @@ public class ResolutionRatio : MonoBehaviour
         {
             PlayerPrefs.SetInt(resolutionRationumber + "x", 1);
             int currentResolutionRatio = GameData.Instance.GetResolutionRatio();
-            GameData.Instance.SetResolutionRatio(int.Parse(resolutionRationumber));
+            GameController.Instance.addResolution(int.Parse(resolutionRationumber));
+            uiDragClamp.setPosition(resolutionRationumber.ToString());
             if (currentResolutionRatio > GameData.Instance.GetResolutionRatio())
             {
                 SoundManager.Instance.SceneEffectPlayStr("7");

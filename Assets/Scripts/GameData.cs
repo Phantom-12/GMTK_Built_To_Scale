@@ -25,10 +25,10 @@ public class GameData
     private int resolutionRatio = 0; // 1 2 4 8 16
     private Dictionary<int, bool> resolutionRatioEnable = new(){
         {16,true},
-        {8,true},
-        {4,true},
-        {2,true},
-        {1,true},
+        {8,false},
+        {4,false},
+        {2,false},
+        {1,false},
     };
     public event EventHandler<ResolutionRatioChangedEventArgs> ResolutionRatioChangedEvent;
 
