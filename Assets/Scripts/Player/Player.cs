@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private bool ishit;
     GameObject playerTransitionShower;
     PlayerMoveController playerMoveController;
     Animator animator;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        ishit = false;
         playerMoveController = GetComponent<PlayerMoveController>();
         animator = GetComponent<Animator>();
         playerMoveController.SetEnable(true);
@@ -41,10 +43,14 @@ public class Player : MonoBehaviour
 
     public void OnHit()
     {
-        SoundManager.Instance.SceneEffectPlayStr("11");
-        playerMoveController.SetEnable(false);
-        playerMoveController.SetVelocity(0, Vector2.zero);
-        animator.Play("Hit");
+        if (!ishit)
+        {
+            ishit = true;
+            SoundManager.Instance.SceneEffectPlayStr("11");
+            playerMoveController.SetEnable(false);
+            playerMoveController.SetVelocity(0, Vector2.zero);
+            animator.Play("Hit");
+        }
     }
 
     public void OnDeathAnimFinish()
