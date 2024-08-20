@@ -35,6 +35,6 @@ public class ComicMove : MonoBehaviour
     }
     void part5()
     {
-        LevelManager.Instance.SwitchScene("TestScene");
+        LevelManager.Instance.SwitchScene("Level1");
     }
 }

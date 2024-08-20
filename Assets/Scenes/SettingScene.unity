@@ -577,6 +577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StartScene
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &529889677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1245,7 @@ GameObject:
   - component: {fileID: 1601397791}
   - component: {fileID: 1601397790}
   - component: {fileID: 1601397789}
+  - component: {fileID: 1601397793}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1377,6 +1380,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1601397793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601397787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5b15a7762a1804ab8e51b4f1485d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1601397792}
+  _toggleEffects: 0
+  _toggleMusic: 1
+  _toggleMasterVolume: 0
+  _enenvironment: 0
 --- !u!1 &1736132339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +1805,7 @@ GameObject:
   - component: {fileID: 1955216246}
   - component: {fileID: 1955216245}
   - component: {fileID: 1955216244}
+  - component: {fileID: 1955216247}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1902,6 +1923,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1955216247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955216242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5b15a7762a1804ab8e51b4f1485d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1955216246}
+  _toggleEffects: 0
+  _toggleMusic: 0
+  _toggleMasterVolume: 1
+  _enenvironment: 0
 --- !u!1 &1974679830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +1952,7 @@ GameObject:
   - component: {fileID: 1974679834}
   - component: {fileID: 1974679833}
   - component: {fileID: 1974679832}
+  - component: {fileID: 1974679835}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2031,6 +2070,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1974679835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974679830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5b15a7762a1804ab8e51b4f1485d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1974679834}
+  _toggleEffects: 1
+  _toggleMusic: 0
+  _toggleMasterVolume: 0
+  _enenvironment: 0
 --- !u!1 &2117090154
 GameObject:
   m_ObjectHideFlags: 0
