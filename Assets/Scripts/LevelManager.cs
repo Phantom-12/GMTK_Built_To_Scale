@@ -76,7 +76,7 @@ public class LevelManager
 
     public void PlayTransitionAnim(Texture2D texture2D)
     {
-        SceneChangeEvent?.Invoke(this, new() { Sprite = Sprite.Create(texture2D, new Rect(Vector2.zero, texture2D.Size()), new Vector2(0.5f, 0.5f)) });
+        SceneChangeEvent?.Invoke(this, new() { Sprite = Sprite.Create(texture2D, new Rect(Vector2.zero, new Vector2(texture2D.width,texture2D.height)), new Vector2(0.5f, 0.5f)) });
     }
 
     public void Exit()
