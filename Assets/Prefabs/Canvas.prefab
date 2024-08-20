@@ -938,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: StartScene
   rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &4784855437292873353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2278,10 @@ PrefabInstance:
     - target: {fileID: 2875397781533838765, guid: fa5c000288981624186d158948304dca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391265321052645417, guid: fa5c000288981624186d158948304dca, type: 3}
+      propertyPath: m_Name
+      value: ResolutionSlider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

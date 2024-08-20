@@ -169,4 +169,15 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         //pos.y = Mathf.Clamp(pos.y, minY, maxY);
         return pos;
     }
+    public void setPosition(string ratio)
+    {
+        foreach (Transform t in ScaleRectTransforms)
+        {
+            if (t.name == ratio)
+            {
+                rt.position = new Vector3(t.position.x, rt.position.y, rt.position.z);
+            }
+        }
+        
+    }
 }

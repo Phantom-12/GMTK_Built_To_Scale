@@ -573,6 +573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &307785385
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StartScene
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &344738110
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &478526771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &504966795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf2871f3e848dc469a1f3664314180b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TestScene
+  sceneName: ComicScene
+  rePlayMusic: 0
+  isContinue: 1
 --- !u!1 &626066105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &775970005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &784052156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +2652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &1495591494
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,6 +3288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  rePlayMusic: 0
+  isContinue: 0
 --- !u!1 &1909792188
 GameObject:
   m_ObjectHideFlags: 0

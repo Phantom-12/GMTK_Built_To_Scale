@@ -20,9 +20,10 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         PlayerPrefs.SetInt("16x", 1);
-        PlayerPrefs.SetInt("8x", 1);
-        PlayerPrefs.SetInt("4x", 1);
-        PlayerPrefs.SetInt("2x", 1);
+        PlayerPrefs.SetInt("8x", 0);
+        PlayerPrefs.SetInt("4x", 0);
+        PlayerPrefs.SetInt("2x", 0);
+        PlayerPrefs.SetInt("LC1", 0);
         Instance = this;
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
         for (int i = 0; i < avaliableResolutionRatios.Count;)
@@ -133,5 +134,11 @@ public class GameController : MonoBehaviour
             Time.timeScale = 0;
         else
             Time.timeScale = 1;
+    }
+    public void addResolution(int ratio)
+    {
+        avaliableResolutionRatios.Add(ratio);
+        GameData.Instance.InitResolutonRatio(avaliableResolutionRatios, ratio);
+        FindFirstObjectByType<UIDragClamp>().Init();
     }
 }

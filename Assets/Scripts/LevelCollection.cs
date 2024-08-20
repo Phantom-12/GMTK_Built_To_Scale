@@ -11,6 +11,7 @@ public class LevelCollection : MonoBehaviour
     [SerializeField]
     private GameObject indicator;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
 
     private void Awake()
@@ -18,6 +19,7 @@ public class LevelCollection : MonoBehaviour
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
         indicator = transform.Find("Indicator").gameObject;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -61,6 +63,7 @@ public class LevelCollection : MonoBehaviour
         {
             indicator.SetActive(false);
             animator.enabled = false;
+            spriteRenderer.sprite = null;
         }
     }
 
