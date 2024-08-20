@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComicGradient : MonoBehaviour
 {
@@ -42,6 +43,6 @@ public class ComicGradient : MonoBehaviour
     void part6()
     {
         SoundManager.Instance.MusicPlayStr("1");
-        ScreenCapturer.Instance.Do("StartScene");
+        SceneManager.LoadScene("StartScene");
     }
 }

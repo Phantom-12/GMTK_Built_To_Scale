@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComicMove : MonoBehaviour
 {
@@ -35,6 +36,6 @@ public class ComicMove : MonoBehaviour
     }
     void part5()
     {
-        LevelManager.Instance.SwitchScene("Level1");
+        SceneManager.LoadScene("Level1");
     }
 }

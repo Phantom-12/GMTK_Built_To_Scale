@@ -14,12 +14,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
-        GameData.Instance.PauseStateChangedEvent += OnPauseStateChanged;
-    }
-
-    private void Start()
-    {
         ishit = false;
         playerMoveController = GetComponent<PlayerMoveController>();
         animator = GetComponent<Animator>();
@@ -28,6 +22,14 @@ public class Player : MonoBehaviour
         playerTransitionShower.GetComponent<Animator>().SetFloat("alpha", 0);
         keyFloaterGold.gameObject.SetActive(false);
         keyFloaterSilver.gameObject.SetActive(false);
+        GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
+        GameData.Instance.PauseStateChangedEvent += OnPauseStateChanged;
+    }
+
+    private void Start()
+    {
+
+
     }
 
     private void OnDestroy()

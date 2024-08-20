@@ -7,14 +7,12 @@ public class LavaTilemap : SerializedMonoBehaviour
 {
     private BoxCollider2D boxCollider2D;
     private Player player;
-    private GameObject transitionShower;
 
     private void Awake()
     {
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
         boxCollider2D = GetComponent<BoxCollider2D>();
         player = FindFirstObjectByType<Player>();
-        transitionShower = transform.Find("TransitionShower").gameObject;
     }
 
     private void Start()

@@ -11,6 +11,8 @@ public class FirstStart : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        PlayerPrefs.SetInt("FS", 0);
+        PlayerPrefs.Save();
     }
     void Start()
     {

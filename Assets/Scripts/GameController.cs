@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         PlayerPrefs.SetInt("16x", 1);
+        PlayerPrefs.Save();
         Instance = this;
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
         for (int i = 0; i < avaliableResolutionRatios.Count;)
