@@ -7,6 +7,11 @@ using System;
 public class LockedDoor : SerializedMonoBehaviour
 {
     [SerializeField]
+    private CapsuleCollider2D boxCollider1;
+    [SerializeField]
+    private BoxCollider2D boxCollider2;
+
+    [SerializeField]
     [DictionaryDrawerSettings(KeyLabel = "分辨率（不应更改）", ValueLabel = "Sprite")]
     readonly Dictionary<int, Sprite> lockedSprites = new(){
         {16,null},
@@ -35,6 +40,8 @@ public class LockedDoor : SerializedMonoBehaviour
 
     private void Awake()
     {
+        boxCollider1 = GetComponent<CapsuleCollider2D>();
+        boxCollider2 = GetComponent<BoxCollider2D>();
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = FindFirstObjectByType<Player>();
@@ -51,16 +58,11 @@ public class LockedDoor : SerializedMonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
-        switch (GameData.Instance.GetResolutionRatio())
+        if (hasKey)
         {
-            case 16:
-            case 8:
-            case 4:
-            case 2:
-            case 1:
-                if (hasKey)
-                    Unlock();
-                break;
+          boxCollider1.enabled = false;
+            boxCollider2.enabled = false;
+            Unlock();
         }
     }
 
