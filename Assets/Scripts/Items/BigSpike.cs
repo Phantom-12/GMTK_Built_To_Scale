@@ -46,10 +46,14 @@ public class BigSpike : SerializedMonoBehaviour
         switch (GameData.Instance.GetResolutionRatio())
         {
             case 16:
+                player.OnHit();
+                break;
             case 8:
                 player.OnHit();
                 break;
             case 4:
+                player.OnHit();
+                break;
             case 2:
             case 1:
                 break;
