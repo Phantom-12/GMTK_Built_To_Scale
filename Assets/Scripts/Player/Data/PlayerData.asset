@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   movementVelocity: 10
-  jumpVelocity: 18
+  jumpVelocity: 20
   maxJumpTimes: 1
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 1

@@ -77,7 +77,7 @@ namespace Tools
                 else Light2D.intensity = _changedValues[index--];
             }
         }
-
+        /*
         //组件检测控制台提示方法
         protected sealed override void ComponentLog()
         {
@@ -90,6 +90,6 @@ namespace Tools
                 }
             }
             else isLight2DLog = false;
-        }
+        }*/
     }
 }

@@ -24,6 +24,10 @@ public class Exit : MonoBehaviour
             return;
         if (collision.gameObject.CompareTag("Player"))
         {
+            if(sceneName == "9")
+            {
+                SoundManager.Instance.StopSound();
+            }
             PlayerPrefs.SetInt("L" + sceneName, 1);
             PlayerPrefs.SetInt("CurrentLevel", int.Parse(sceneName));
             ScreenCapturer.Instance.Do("Level" + sceneName);

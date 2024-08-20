@@ -17,7 +17,7 @@ public class ComicGradient : MonoBehaviour
         Invoke("part3", delays[2]);
         Invoke("part4", delays[3]);
         Invoke("part5", delays[4]);
-        Invoke("part5", delays[5]);
+        Invoke("part6", delays[5]);
     }
     void part1()
     {
@@ -41,6 +41,7 @@ public class ComicGradient : MonoBehaviour
     }
     void part6()
     {
-        LevelManager.Instance.SwitchScene("StartScene");
+        SoundManager.Instance.MusicPlayStr("1");
+        ScreenCapturer.Instance.Do("StartScene");
     }
 }
