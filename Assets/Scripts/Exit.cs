@@ -30,6 +30,7 @@ public class Exit : MonoBehaviour
             }
             PlayerPrefs.SetInt("L" + sceneName, 1);
             PlayerPrefs.SetInt("CurrentLevel", int.Parse(sceneName));
+            PlayerPrefs.Save();
             ScreenCapturer.Instance.Do("Level" + sceneName);
         }
     }

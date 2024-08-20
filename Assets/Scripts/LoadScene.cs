@@ -29,6 +29,7 @@ public class LoadScene : MonoBehaviour
                 if(PlayerPrefs.GetInt("FS", 0) == 0)
                 {
                     PlayerPrefs.SetInt("FS", 1);
+                    PlayerPrefs.Save();
                     ScreenCapturer.Instance.Do(sceneName);
                     return;
                 }
