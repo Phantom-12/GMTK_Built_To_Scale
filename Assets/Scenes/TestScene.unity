@@ -13608,6 +13608,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelCollection
       objectReference: {fileID: 0}
+    - target: {fileID: 6740216102555360807, guid: 18393d8534c108049bc19406d35b960f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1278494551, guid: 06dd039e8ec226f4da8381005cdd9a8d, type: 3}
+    - target: {fileID: 6740216102555360807, guid: 18393d8534c108049bc19406d35b960f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7166300038471631448, guid: 18393d8534c108049bc19406d35b960f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -13619,7 +13627,7 @@ PrefabInstance:
     - target: {fileID: 8325068763209949742, guid: 18393d8534c108049bc19406d35b960f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 57bb057db7857dd46b25f92d6af2f160, type: 2}
+      objectReference: {fileID: 9100000, guid: 9c434062092363c49a84a4bab1eae69e, type: 2}
     - target: {fileID: 9120185361791561582, guid: 18393d8534c108049bc19406d35b960f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.882929
