@@ -9,6 +9,7 @@ public class LoadScene : MonoBehaviour
     Button button;
     [SerializeField] string sceneName;
     [SerializeField] bool rePlayMusic;
+    [SerializeField] bool isContinue;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,24 @@ public class LoadScene : MonoBehaviour
                     SoundManager.Instance.MusicPlayStr("1");
                     SoundManager.Instance.StopSound();
                 }
+            }
+            if(sceneName == "ComicScene")
+            {
+                if(PlayerPrefs.GetInt("FS", 0) == 0)
+                {
+                    PlayerPrefs.SetInt("FS", 1);
+                    ScreenCapturer.Instance.Do(sceneName);
+                    return;
+                }
+                else
+                {
+                    if (isContinue)
+                    {
+                        ScreenCapturer.Instance.Do("Level" + (PlayerPrefs.GetInt("CurrentLevel", 1)).ToString());
+                        return;
+                    }
+                }
+                
             }
             ScreenCapturer.Instance.Do(sceneName);
         });

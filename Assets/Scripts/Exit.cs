@@ -25,7 +25,8 @@ public class Exit : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerPrefs.SetInt("L" + sceneName, 1);
-            ScreenCapturer.Instance.Do(sceneName);
+            PlayerPrefs.SetInt("CurrentLevel", int.Parse(sceneName));
+            ScreenCapturer.Instance.Do("Level" + sceneName);
         }
     }
 
