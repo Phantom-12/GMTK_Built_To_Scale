@@ -1150,6 +1150,7 @@ MonoBehaviour:
       Entry: 5
       Data: true
   mechanicalGate: {fileID: 5726868185459910862}
+  circuit: {fileID: 8843452284279294729}
 --- !u!1 &3417491998118224285
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class Circuit : SerializedMonoBehaviour
     private MechanicalGate mechanicalGate;
 
     private bool connected = false;
+    private int currentResolutionRatio;
 
     private void Awake()
     {
@@ -71,10 +72,8 @@ public class Circuit : SerializedMonoBehaviour
             connectedTilemaps[args.PrevResolutionRatio].gameObject.SetActive(false);
             connectedTilemaps[args.CurResolutionRatio].gameObject.SetActive(true);
         }
-        if (args.CurResolutionRatio <= 4 && !connected)
-            Connect();
-        else if (args.CurResolutionRatio > 4 && connected)
-            Disconnect();
+        currentResolutionRatio = args.CurResolutionRatio;
+        CheckConnect();
 
         GameObject fromObj, toObj;
         if (!connected)
@@ -129,6 +128,14 @@ public class Circuit : SerializedMonoBehaviour
             yield return new WaitForSeconds(deltaTime);
         }
         fromObj.SetActive(false);
+    }
+
+    public void CheckConnect()
+    {
+        if (currentResolutionRatio <= 4 && !mechanicalGate.lockedByKey && !connected)
+            Connect();
+        else if (currentResolutionRatio > 4 && connected)
+            Disconnect();
     }
 
     private void Connect()

@@ -26,7 +26,7 @@ public class MechanicalGate : SerializedMonoBehaviour
     [SerializeField]
     private bool lockedByCircuit = true;
     [SerializeField]
-    private bool lockedByKey = true;
+    public bool lockedByKey = true;
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2D;

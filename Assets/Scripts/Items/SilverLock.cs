@@ -33,6 +33,8 @@ public class SilverLock : SerializedMonoBehaviour
     private Player player;
     [SerializeField]
     private MechanicalGate mechanicalGate;
+    [SerializeField]
+    private Circuit circuit;
     private GameObject transitionShower;
 
     private void Awake()
@@ -131,5 +133,6 @@ public class SilverLock : SerializedMonoBehaviour
         spriteRenderer.sprite = unlockedSprites[GameData.Instance.GetResolutionRatio()];
         player.EnableKeyFloaterSilver(false);
         mechanicalGate.UnlockByKey();
+        circuit.CheckConnect();
     }
 }

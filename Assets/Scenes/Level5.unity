@@ -726,6 +726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprite-bg1
       objectReference: {fileID: 0}
+    - target: {fileID: 6561204157189472667, guid: ae7f3442bcce85c4c9c73733842cb54d, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 548488785}
     - target: {fileID: 7223375388268634032, guid: ae7f3442bcce85c4c9c73733842cb54d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1569,7 +1573,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1866,6 +1870,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515670338}
   m_CullTransparentMesh: 1
+--- !u!1 &548488785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4269622232287598209, guid: 39ed183031d24ee4298479cc2cd00623, type: 3}
+  m_PrefabInstance: {fileID: 5352332377802888481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &583658773
 GameObject:
   m_ObjectHideFlags: 0
