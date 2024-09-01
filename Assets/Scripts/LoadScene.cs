@@ -10,6 +10,7 @@ public class LoadScene : MonoBehaviour
     [SerializeField] string sceneName;
     [SerializeField] bool rePlayMusic;
     [SerializeField] bool isContinue;
+    [SerializeField] bool isChooseLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,18 @@ public class LoadScene : MonoBehaviour
                 {
                     if (isContinue)
                     {
+
+                        if(PlayerPrefs.GetInt("CurrentLevel") >= 9)
+                        {
+                            ScreenCapturer.Instance.Do("ChooseLevelScene");
+                            return;
+                        }
                         ScreenCapturer.Instance.Do("Level" + (PlayerPrefs.GetInt("CurrentLevel", 1)).ToString());
+                        return;
+                    }
+                    if(isChooseLevel)
+                    {
+                        ScreenCapturer.Instance.Do("Level1");
                         return;
                     }
                 }
