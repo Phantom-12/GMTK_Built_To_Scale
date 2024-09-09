@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Artworks/UI/Logo/Logo.controller.meta
 guid: 19b188ef7f40df945b89f199f8828b63
 NativeFormatImporter:
+========
+guid: 2c4b875a9abfa8e45a3c6db0fd6b96c8
+DefaultImporter:
+>>>>>>>> 2eaf8aaf94d6d00b4b2ce1d22a3c82ba4b97b839:Assets/Scenes/old Level3.unity.meta
   externalObjects: {}
   mainObjectFileID: 9100000
   userData: 
