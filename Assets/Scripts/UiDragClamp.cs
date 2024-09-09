@@ -5,6 +5,7 @@ using TMPro;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 
 public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -162,7 +163,7 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     // 限制坐标范围
     Vector3 DragRangeLimit(Vector3 pos)
     {
-        pos.x = Mathf.Clamp(pos.x, ScaleRectTransforms[0].position.x, ScaleRectTransforms[ScaleRectTransforms.Length - 1].position.x);
+        pos.x = Mathf.Clamp(pos.x, ScaleRectTransforms[0].position.x, ScaleRectTransforms[ScaleRectTransforms.Length - 2].position.x);
         //pos.x = Mathf.Clamp(pos.x, minX, maxX);
         // print(minX);
         // print(maxX);
@@ -179,5 +180,77 @@ public class UIDragClamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
         }
         
+    }
+    public void ScaleDown()
+    {
+        int currentRatio = GameData.Instance.GetResolutionRatio();
+        bool gotRatio = false;
+        for (int i = 0; i < ScaleRectTransforms.Length; i++)
+        {
+            if (gotRatio)
+            {
+                if (ScaleRectTransforms[i].name == "1")
+                {
+                    if (ScaleRectTransforms[i].gameObject.activeSelf)
+                    {
+                        rt.position = new Vector3(ScaleRectTransforms[i].position.x, rt.position.y, rt.position.z);
+                        GameData.Instance.SetResolutionRatio(int.Parse(ScaleRectTransforms[i].name));
+                        SoundManager.Instance.SceneEffectPlayStr("8");
+                        break;
+                    }
+                }
+                if (ScaleRectTransforms[i].name != "1")
+                {
+                    if (!ScaleRectTransforms[i].gameObject.activeSelf)
+                    {
+                        rt.position = new Vector3(ScaleRectTransforms[i].position.x, rt.position.y, rt.position.z);
+                        GameData.Instance.SetResolutionRatio(int.Parse(ScaleRectTransforms[i].name));
+                        SoundManager.Instance.SceneEffectPlayStr("8");
+                        break;
+                    }
+                }
+
+            }
+            if (int.Parse(ScaleRectTransforms[i].name) == currentRatio)
+            {
+                gotRatio = true;
+            }
+        }
+    }
+    public void ScaleUp()
+    {
+        int currentRatio = GameData.Instance.GetResolutionRatio();
+        bool gotRatio = false;
+        for (int i = ScaleRectTransforms.Length; i > 0; i--)
+        {
+            if (gotRatio)
+            {
+                if (ScaleRectTransforms[i-1].name == "1")
+                {
+                    if (ScaleRectTransforms[i-1].gameObject.activeSelf)
+                    {
+                        rt.position = new Vector3(ScaleRectTransforms[i-1].position.x, rt.position.y, rt.position.z);
+                        GameData.Instance.SetResolutionRatio(int.Parse(ScaleRectTransforms[i-1].name));
+                        SoundManager.Instance.SceneEffectPlayStr("7");
+                        break;
+                    }
+                }
+                if (ScaleRectTransforms[i-1].name != "1")
+                {
+                    if (!ScaleRectTransforms[i-1].gameObject.activeSelf)
+                    {
+                        rt.position = new Vector3(ScaleRectTransforms[i-1].position.x, rt.position.y, rt.position.z);
+                        GameData.Instance.SetResolutionRatio(int.Parse(ScaleRectTransforms[i-1].name));
+                        SoundManager.Instance.SceneEffectPlayStr("7");
+                        break;
+                    }
+                }
+
+            }
+            if (int.Parse(ScaleRectTransforms[i-1].name) == currentRatio)
+            {
+                gotRatio = true;
+            }
+        }
     }
 }

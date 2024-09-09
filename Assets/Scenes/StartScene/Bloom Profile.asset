@@ -28,17 +28,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   skipIterations:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.56
+    m_Value: 0.76
   intensity:
     m_OverrideState: 1
-    m_Value: 3.42
+    m_Value: 7.95
   scatter:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.5
   clamp:
     m_OverrideState: 0
     m_Value: 30244
