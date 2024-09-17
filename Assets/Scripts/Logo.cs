@@ -7,8 +7,9 @@ public class Logo : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip enterAudioClip;
-    public AudioClip exitAudioClip;  
-    bool play = false;
+    public AudioClip exitAudioClip;
+    bool play1 = false;
+    bool play2 = false;
     [SerializeField]
     float sTime = 0.5f;
     bool start = false;
@@ -23,12 +24,12 @@ public class Logo : MonoBehaviour
         sTime -= Time.deltaTime;
         if (sTime < 0)
         {
-            if(!start)
+            if (!start)
             {
-                if (!play)
+                if (!play1)
                 {
-                    //audioSource.PlayOneShot(enterAudioClip, 0.5f);
-                    play = true;
+                    audioSource.PlayOneShot(enterAudioClip, 1f);
+                    play1 = true;
                     start = true;
                 }
 
@@ -38,9 +39,13 @@ public class Logo : MonoBehaviour
                 lastTime -= Time.deltaTime;
                 if (lastTime <= 0)
                 {
-                    //audioSource.PlayOneShot(exitAudioClip, 0.5f);
+                    if (!play2)
+                    {
+                        audioSource.PlayOneShot(exitAudioClip, 1f);
+                        play2 = true;
+                    }
                     eTime -= Time.deltaTime;
-                    if(eTime <= 0)
+                    if (eTime <= 0)
                     {
                         end = true;
                     }

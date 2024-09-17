@@ -135,6 +135,10 @@ public class SoundManager : MonoBehaviour
     public void ChangeVolumeMusic(float value)
     {
         _musicSource.volume = value;
+        x16.volume = value;
+        x8.volume = value;
+        x4.volume = value;
+        x2.volume = value;
         musicVol = value;
     }
     public float ReturnVolumeMusic()

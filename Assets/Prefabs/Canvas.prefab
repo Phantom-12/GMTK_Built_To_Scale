@@ -195,7 +195,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 767, y: -352}
-  m_SizeDelta: {x: 61, y: 61}
+  m_SizeDelta: {x: 63, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1722224043428837538
 CanvasRenderer:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2009233725, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+  m_Sprite: {fileID: -1653242552, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -265,7 +265,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 763521654, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+    m_PressedSprite: {fileID: -539028384, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -476,7 +476,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -461, y: -352}
-  m_SizeDelta: {x: 61, y: 61}
+  m_SizeDelta: {x: 63, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1244456941237554651
 CanvasRenderer:
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -535627164, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+  m_Sprite: {fileID: -214178728, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -546,7 +546,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 1014118722, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+    m_PressedSprite: {fileID: -1738298580, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1262,7 +1262,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 766, y: -165}
-  m_SizeDelta: {x: 143, y: 35}
+  m_SizeDelta: {x: 145, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &509991080993499865
 CanvasRenderer:
@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1543159416, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+  m_Sprite: {fileID: -1903087130, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: -443473830, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+    m_PressedSprite: {fileID: 1268944436, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2279,7 +2279,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -767, y: -352}
-  m_SizeDelta: {x: 61, y: 61}
+  m_SizeDelta: {x: 63, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6772687830997689315
 CanvasRenderer:
@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1198333653, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+  m_Sprite: {fileID: 327203154, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2349,7 +2349,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: -2135781547, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+    m_PressedSprite: {fileID: -17263923, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2805,7 +2805,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 766, y: -80}
-  m_SizeDelta: {x: 143, y: 35}
+  m_SizeDelta: {x: 145, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5214761259884703361
 CanvasRenderer:
@@ -2835,7 +2835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2061199912, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+  m_Sprite: {fileID: -1375323736, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2875,7 +2875,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: -91810246, guid: 40ab1443d4fb22a499571ffb3d5749f0, type: 3}
+    m_PressedSprite: {fileID: -1629332756, guid: a3f6f51c9fefdbd43a1cb85c63937c2b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:

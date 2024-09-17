@@ -94,6 +94,22 @@ public class PlayerInputHandler : MonoBehaviour
             GrabInput=false;
         }
     }
+    public void OnScaleUp(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            UIDragClamp uIDragClamp = GameObject.Find("ResolutionSlider").GetComponent<UIDragClamp>();
+            uIDragClamp.ScaleUp();
+        }
+    }
+    public void OnScaleDown(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            UIDragClamp uIDragClamp = GameObject.Find("ResolutionSlider").GetComponent<UIDragClamp>();
+            uIDragClamp.ScaleDown();
+        }
+    }
 
     public void UseJumpInput()
     {
