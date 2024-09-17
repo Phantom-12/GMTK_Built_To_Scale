@@ -11,6 +11,8 @@ public class Exit : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("CurrentLevel", int.Parse(sceneName) - 1);
+        PlayerPrefs.Save();
+
     }
 
     // Update is called once per frame
