@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+#if UNITY_EDITOR
 public class TilemapGenerator : SerializedMonoBehaviour
 {
     // tilemap层枚举
@@ -15,6 +16,7 @@ public class TilemapGenerator : SerializedMonoBehaviour
         platform,
         lava,
         decoration,
+
     }
 
     // tile信息
@@ -189,3 +191,4 @@ public class TilemapGenerator : SerializedMonoBehaviour
         return layer;
     }
 }
+#endif
