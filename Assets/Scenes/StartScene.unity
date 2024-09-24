@@ -3412,6 +3412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionShower
       objectReference: {fileID: 0}
+    - target: {fileID: 5705964035064785666, guid: a3be41f85fe866b48977de58fbdbf50b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8078896003873542947, guid: a3be41f85fe866b48977de58fbdbf50b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.404968
