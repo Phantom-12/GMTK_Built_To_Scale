@@ -25341,7 +25341,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 0
+  m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -117993,6 +117993,10 @@ PrefabInstance:
     - target: {fileID: 5556364313220675804, guid: 39ed183031d24ee4298479cc2cd00623, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556364313220675804, guid: 39ed183031d24ee4298479cc2cd00623, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5604323189836894893, guid: 39ed183031d24ee4298479cc2cd00623, type: 3}
       propertyPath: m_Layer

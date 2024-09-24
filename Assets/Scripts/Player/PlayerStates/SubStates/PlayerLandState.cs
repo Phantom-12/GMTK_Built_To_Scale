@@ -11,7 +11,6 @@ public class PlayerLandState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.SetVelocityX(player.InputHandler.NormInputX);
     }
 
     public override void LogicUpdate()

@@ -47,6 +47,7 @@ public class PlayerMoveController : MonoBehaviour
     #endregion
 
     #region Other Variables 其他变量
+    public bool moveEnabled=true;
     public int FacingDirection { get; private set; }
     private Vector2 workspace;
     #endregion
@@ -78,11 +79,15 @@ public class PlayerMoveController : MonoBehaviour
 
     private void Update()
     {
+        if(!moveEnabled)
+            return;
         StateMachine.CurrentState.LogicUpdate();
     }
 
     private void FixedUpdate()
     {
+        if(!moveEnabled)
+            return;
         StateMachine.CurrentState.PhysicsUpdate();
     }
     #endregion
@@ -182,7 +187,7 @@ public class PlayerMoveController : MonoBehaviour
 
     public void SetEnable(bool enable)
     {
-        playerInput.enabled = enable;
+        moveEnabled = enable;
     }
     #endregion
 }
