@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class BGSelfAdaption : MonoBehaviour
 {
+    [SerializeField]
+    RectTransform CanvasRectTransform;
     // Start is called before the first frame update
     void Start()
     {
-        float screenWidth = Screen.width;
-        float screenHeight = Screen.height;
-        gameObject.transform.localScale = new Vector3(MathF.Round((screenWidth/screenHeight)/(1920f/1080f),3),1, 1);
+        CanvasRectTransform= GetComponent<RectTransform>();
+        gameObject.transform.localScale = new Vector3(MathF.Round(CanvasRectTransform.rect.width / 1920f,3),CanvasRectTransform.rect.height / 1080f, 1);
     }
 
 }

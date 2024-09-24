@@ -25490,6 +25490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bcf4e210e76efa45bf24a32cc9450d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanvasRectTransform: {fileID: 1260929641}
 --- !u!1001 &442482572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45566,6 +45567,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5150dbe2e1747544a4963b094096a96, type: 3}
+--- !u!224 &1260929641 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4047684528692358398, guid: c5150dbe2e1747544a4963b094096a96, type: 3}
+  m_PrefabInstance: {fileID: 1260929640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1293949574
 GameObject:
   m_ObjectHideFlags: 0
