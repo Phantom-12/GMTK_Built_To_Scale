@@ -38,19 +38,36 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput=context.ReadValue<Vector2>();
-        NormInputX=(int)(RawMovementInput.x*Vector2.right).normalized.x;
-        NormInputY=(int)(RawMovementInput.y*Vector2.up).normalized.y;
+        OnMoveInput(RawMovementInput);
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
+            OnJumpInput(true);
+        }
+        else if(context.canceled)
+        {
+            OnJumpInput(false);
+        }
+    }
+
+    public void OnMoveInput(Vector2 dir)
+    {
+        NormInputX=(int)(dir.x*Vector2.right).normalized.x;
+        NormInputY=(int)(dir.y*Vector2.up).normalized.y;
+    }
+
+    public void OnJumpInput(bool pressed)
+    {
+        if(pressed)
+        {
             JumpInput=true;
             JumpInputStop=false;
             jumpStartTime=Time.time;
         }
-        else if(context.canceled)
+        else
         {
             JumpInputStop=true;
         }

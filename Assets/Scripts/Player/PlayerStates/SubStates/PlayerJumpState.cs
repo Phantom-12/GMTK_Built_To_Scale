@@ -14,8 +14,9 @@ public class PlayerJumpState : PlayerAbilityState
     public override void Enter()
     {
         SoundManager.Instance.SceneEffectPlayStr("15");
-        base.Enter();
         player.SetVelocityY(playerData.jumpVelocity);
+        player.Anim.SetFloat("yVelocity",player.Rb.velocity.y);
+        base.Enter();
         DecreaseJumpTimesLeft();
         player.InAirState.SetIsJumping();
         isAbilityDone=true;
