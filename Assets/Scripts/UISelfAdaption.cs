@@ -12,7 +12,7 @@ public class UISelfAdaption : MonoBehaviour
         RectTransform CanvasRectTransform= GetComponent<RectTransform>();
         foreach (RectTransform rectTransform  in transform)
         {
-            if(rectTransform.name != "BackGround")
+            if(rectTransform.name != "BackGround" && rectTransform.name != "ScaleAdaption")
             {
                 if (CanvasRectTransform.rect.width < 1920f)
                 {

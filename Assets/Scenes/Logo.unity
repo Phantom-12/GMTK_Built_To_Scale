@@ -448,6 +448,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4719733507728410236, guid: a3be41f85fe866b48977de58fbdbf50b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.6745605
+      objectReference: {fileID: 0}
     - target: {fileID: 5705964035064785666, guid: a3be41f85fe866b48977de58fbdbf50b, type: 3}
       propertyPath: m_Name
       value: SceneTransitionShower
