@@ -24,14 +24,10 @@ public class MobileAdapter : MonoBehaviour
     }
     public void ScaleUp()
     {
-        Time.timeScale=0.1f;
-        Application.targetFrameRate=3;
         uiDragClamp.ScaleUp();
     }
     public void ScaleDown()
     {
-        Time.timeScale=1f;
-        Application.targetFrameRate=30;
         uiDragClamp.ScaleDown();
     }
 

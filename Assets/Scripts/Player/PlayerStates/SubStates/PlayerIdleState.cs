@@ -43,5 +43,9 @@ public class PlayerIdleState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+        if(!hasExited)
+        {
+            player.SetVelocity(0,Vector2.zero);
+        }
     }
 }
