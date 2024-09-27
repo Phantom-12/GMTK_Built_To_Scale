@@ -75,6 +75,7 @@ public class GameData
             CurResolutionRatio = resolutionRatio
         };
         this.resolutionRatio = resolutionRatio;
+        changeMusicByResolutionRation(resolutionRatio.ToString());
         OnResolutionRatioChanged(args);
     }
 
@@ -126,5 +127,36 @@ public class GameData
         };
         isPause = pause;
         OnPauseStateChanged(args);
+    }
+    void changeMusicByResolutionRation(string ratio)
+    {
+        switch (int.Parse(ratio))
+        {
+            case 16:
+                SoundManager.Instance.ReleaseMuteSound(16);
+                SoundManager.Instance.ReleaseMuteSound(8);
+                SoundManager.Instance.ReleaseMuteSound(4);
+                SoundManager.Instance.ReleaseMuteSound(2);
+                break;
+            case 8:
+                SoundManager.Instance.MuteSound(16);
+                SoundManager.Instance.ReleaseMuteSound(8);
+                SoundManager.Instance.ReleaseMuteSound(4);
+                SoundManager.Instance.ReleaseMuteSound(2);
+                break;
+            case 4:
+                SoundManager.Instance.MuteSound(16);
+                SoundManager.Instance.MuteSound(8);
+                SoundManager.Instance.ReleaseMuteSound(4);
+                SoundManager.Instance.ReleaseMuteSound(2);
+                break;
+            case 2:
+                SoundManager.Instance.MuteSound(16);
+                SoundManager.Instance.MuteSound(8);
+                SoundManager.Instance.MuteSound(4);
+                SoundManager.Instance.ReleaseMuteSound(2);
+                break;
+            default: break;
+        }
     }
 }
