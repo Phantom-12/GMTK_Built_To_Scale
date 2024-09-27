@@ -28,7 +28,7 @@ public class Circuit : SerializedMonoBehaviour
     private MechanicalGate mechanicalGate;
 
     private int currentResolutionRatio;
-
+    private bool hasConnect = false;
     private void Awake()
     {
         GameData.Instance.ResolutionRatioChangedEvent += OnResolutionRatioChanged;
@@ -131,7 +131,7 @@ public class Circuit : SerializedMonoBehaviour
 
     public void CheckConnect()
     {
-        if (currentResolutionRatio <= 4 && !mechanicalGate.lockedByKey)
+        if (currentResolutionRatio <= 4 && !mechanicalGate.lockedByKey && !hasConnect)
             Connect();
         else if (currentResolutionRatio > 4 && !mechanicalGate.lockedByKey)
             Disconnect();
@@ -139,6 +139,7 @@ public class Circuit : SerializedMonoBehaviour
 
     private void Connect()
     {
+        hasConnect = true;
         SoundManager.Instance.SceneEffectPlayStr("12");
         if (disconnectedTilemaps[GameData.Instance.GetResolutionRatio()])
             disconnectedTilemaps[GameData.Instance.GetResolutionRatio()].gameObject.SetActive(false);
@@ -149,6 +150,7 @@ public class Circuit : SerializedMonoBehaviour
 
     private void Disconnect()
     {
+        hasConnect = false;
         if (connectedTilemaps[GameData.Instance.GetResolutionRatio()])
             connectedTilemaps[GameData.Instance.GetResolutionRatio()].gameObject.SetActive(true);
         if (disconnectedTilemaps[GameData.Instance.GetResolutionRatio()])
