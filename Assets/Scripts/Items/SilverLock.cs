@@ -51,7 +51,7 @@ public class SilverLock : SerializedMonoBehaviour
             Unlock();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
             return;
@@ -129,6 +129,7 @@ public class SilverLock : SerializedMonoBehaviour
 
     private void Unlock()
     {
+        SoundManager.Instance.SceneEffectPlayStr("9");
         locked = false;
         spriteRenderer.sprite = unlockedSprites[GameData.Instance.GetResolutionRatio()];
         player.EnableKeyFloaterSilver(false);
