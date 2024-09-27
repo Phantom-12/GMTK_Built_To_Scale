@@ -12,14 +12,14 @@ public class PrivacyActivity extends Activity implements DialogInterface.OnClick
 
    // 隐私协议内容
    final String privacyContext =
-     "欢迎您使用Resolution Breach！我们非常重视保护您的个人信息和隐私。您可以通过《Resolution Breach隐私政策》了解我们收集、使用、存储用户个人信息的情况，以及您所享有的相关权利。请您仔细阅读并充分理解相关内容：\n" +
-     "1.为向您提供游戏服务，我们将依据《Resolution Breach隐私政策》收集、使用、存储必要的信息。\n" +
-     "2.基于您的明示授权，虽然我们并没有相关设备权限，您有权拒绝或取消授权。\n" +
-     "3.您可以访问、更正、删除您的个人信息，还可以撤回授权同意、注销账号、投诉举报以及调整其他隐私设置。\n" +
-     "4.我们已采取符合业界标准的安全防护措施保护您的个人信息。\n" +
-     "5.如您是未成年人，请您和您的监护人仔细阅读本隐私政策，并在征得您的监护人授权同意的前提下使用我们的服务或向我们提供个人信息。\n"+
-     "请您阅读完整版<a href=\"https://docs.qq.com/pdf/DRFlSc016Rmpma0Zu?\">《Resolution Breach隐私政策》</a>了解详细信息。\n"+
-     "如您同意<a href=\"https://docs.qq.com/pdf/DRFlSc016Rmpma0Zu?\">《Resolution Breach隐私政策》</a>，请您点击“同意”开始使用我们的产品和服务，我们将尽全力保护您的个人信息安全。\n";
+     "欢迎您使用Resolution Breach！我们非常重视保护您的个人信息和隐私。您可以通过《Resolution Breach隐私政策》了解我们收集、使用、存储用户个人信息的情况，以及您所享有的相关权利。请您仔细阅读并充分理解相关内容：<br>" +
+     "1.为向您提供游戏服务，我们将依据《Resolution Breach隐私政策》收集、使用、存储必要的信息。<br>" +
+     "2.基于您的明示授权，虽然我们并没有相关设备权限，您有权拒绝或取消授权。<br>" +
+     "3.您可以访问、更正、删除您的个人信息，还可以撤回授权同意、注销账号、投诉举报以及调整其他隐私设置。<br>" +
+     "4.我们已采取符合业界标准的安全防护措施保护您的个人信息。<br>" +
+     "5.如您是未成年人，请您和您的监护人仔细阅读本隐私政策，并在征得您的监护人授权同意的前提下使用我们的服务或向我们提供个人信息。<br>"+
+     "请您阅读完整版<a href=\"https://docs.qq.com/pdf/DRFlSc016Rmpma0Zu?\">《Resolution Breach隐私政策》</a>了解详细信息。<br>"+
+     "如您同意<a href=\"https://docs.qq.com/pdf/DRFlSc016Rmpma0Zu?\">《Resolution Breach隐私政策》</a>，请您点击“同意”开始使用我们的产品和服务，我们将尽全力保护您的个人信息安全。<br>";
      
     
     @Override
