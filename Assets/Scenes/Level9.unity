@@ -2043,12 +2043,12 @@ MonoBehaviour:
   - {fileID: 1412735252}
   - {fileID: 981865132}
   delays:
-  - 0
-  - 3
-  - 6
-  - 9
-  - 12
-  - 15
+  - 4
+  - 7
+  - 10
+  - 13
+  - 16
+  - 19
 --- !u!1 &2011947391
 GameObject:
   m_ObjectHideFlags: 0
