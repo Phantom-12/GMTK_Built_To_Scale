@@ -3198,6 +3198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResolutionScaler
       objectReference: {fileID: 0}
+    - target: {fileID: 2463623917969181160, guid: fa5c000288981624186d158948304dca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2875397781533838765, guid: fa5c000288981624186d158948304dca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

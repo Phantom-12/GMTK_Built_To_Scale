@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cysharp.Threading.Tasks;
 
 public class SceneChangeEventArgs : EventArgs
 {
@@ -62,28 +63,28 @@ public class LevelManager
 
     async public void AfterScreenCapture(Texture2D texture2D)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        await SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
         await Task.Delay(1);
         PlayTransitionAnim(texture2D);
     }
 
     async public void AfterScreenCapture(Texture2D texture2D, string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        await SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         await Task.Delay(1);
         PlayTransitionAnim(texture2D);
     }
 
     async public void AfterScreenCapture(Texture2D texture2D, int buildIndex)
     {
-        SceneManager.LoadScene(buildIndex);
+        await SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
         await Task.Delay(1);
         PlayTransitionAnim(texture2D);
     }
 
     public void PlayTransitionAnim(Texture2D texture2D)
     {
-        SceneChangeEvent?.Invoke(this, new() { Sprite = Sprite.Create(texture2D, new Rect(Vector2.zero, new Vector2(texture2D.width,texture2D.height)), new Vector2(0.5f, 0.5f)) });
+        SceneChangeEvent?.Invoke(this, new() { Sprite = Sprite.Create(texture2D, new Rect(Vector2.zero, new Vector2(texture2D.width, texture2D.height)), new Vector2(0.5f, 0.5f)) });
     }
 
     public void SwitchScene1()
