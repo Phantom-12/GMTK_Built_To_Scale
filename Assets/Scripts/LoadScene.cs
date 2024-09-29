@@ -49,7 +49,7 @@ public class LoadScene : MonoBehaviour
                     }
                     if(isChooseLevel)
                     {
-                        ScreenCapturer.Instance.Do("Level1");
+                        ScreenCapturer.Instance.Do("ComicScene");
                         return;
                     }
                 }
