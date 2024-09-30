@@ -62,7 +62,7 @@ public class SilverLock : SerializedMonoBehaviour
             case 4:
             case 2:
             case 1:
-                if (hasKey)
+                if (hasKey && locked)
                     Unlock();
                 break;
         }
